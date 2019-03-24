@@ -1,9 +1,10 @@
 -
   platformName: Android
   deviceName: 464f9dde
+  udid: 464f9dde
   appPackage: com.cubic.autohome
   appActivity: .LogoActivity
-  noReset: True
+  automationName: UiAutomator2
 
 -
   server_ip: 127.0.0.1

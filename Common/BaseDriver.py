@@ -1,18 +1,17 @@
 # -*- coding: utf-8 -*-
 
+import yaml
 from appium import webdriver
+import os
 
 
-def base_driver():
-    # server 启动参数
-    desired_caps = {}
-    desired_caps['platformName'] = 'Android'
-    desired_caps['deviceName'] = '坚果 R1'
-    desired_caps['udid'] = '464f9dde'
-    desired_caps['appPackage'] = 'com.cubic.autohome'
-    desired_caps['appActivity'] = '.LogoActivity'
-    desired_caps['automationName'] = 'UiAutomator2'
+class BaseDriver:
 
-    # 声明driver对象
-    driver = webdriver.Remote('http://127.0.0.1:4723/wd/hub', desired_caps)
-    return driver
+    def base_driver(self):
+        cur_dir = os.path.dirname(os.path.realpath(__file__))
+        fs = open(os.path.join(cur_dir, "Caps.yaml"))
+        caps_data = yaml.load(fs)
+        # 连接appium server，并告诉其要操作的对象
+        server = 'http://{0}:{1}/wd/hub'.format(caps_data[1]["server_ip"], caps_data[1]["server_port"])
+        driver = webdriver.Remote(server, caps_data[0])
+        return driver

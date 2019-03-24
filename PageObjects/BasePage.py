@@ -15,15 +15,15 @@ class BasePage:
 
         # 等待元素可见
 
-    def wait_eleVisisble(self, locator, by=MobileBy.ANDROID_UIAUTOMATOR, wait_time=30):
+    def wait_eleVisisble(self, locator, by=MobileBy.ANDROID_UIAUTOMATOR, wait_time=20):
         WebDriverWait(self.driver, wait_time).until(EC.visibility_of_element_located((by, locator)))
 
     # 等待元素存在
-    def wait_elePresence(self, locator, by=MobileBy.ANDROID_UIAUTOMATOR, wait_time=15):
+    def wait_elePresence(self, locator, by=MobileBy.ANDROID_UIAUTOMATOR, wait_time=20):
         WebDriverWait(self.driver, wait_time).until(EC.presence_of_element_located((by, locator)))
 
     # 查找并返回一个元素
-    def get_element(self, locator, by=MobileBy.ANDROID_UIAUTOMATOR, wait_time=15):
+    def get_element(self, locator, by=MobileBy.ANDROID_UIAUTOMATOR, wait_time=20):
         if by not in By.__dict__.values() and by not in MobileBy.__dict__.values():
             print("你要找的元素定位不存在！")
             raise Exception
