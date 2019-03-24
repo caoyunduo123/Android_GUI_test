@@ -1,0 +1,10 @@
+-
+  platformName: Android
+  deviceName: 464f9dde
+  appPackage: com.cubic.autohome
+  appActivity: .LogoActivity
+  noReset: True
+
+-
+  server_ip: 127.0.0.1
+  server_port: 4723
