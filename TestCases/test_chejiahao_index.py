@@ -11,7 +11,6 @@ class TestChejiahaoIndex:
 
     @pytest.mark.usefixtures("common_driver")
     def test_index_open_success(self, common_driver):
-        AppRecommendPage(common_driver).click_appNav_Chejiahao()
-        ball_content = ChejiahaoIndexPage(common_driver).get_indexBall_content_ranklist()
-        assert ball_content == "排行榜"
-        ChejiahaoIndexPage(common_driver).click_indexBall_attention()
+        AppRecommendPage(common_driver).click_appTopNav_Chejiahao()
+        AppRecommendPage(common_driver).click_appDownNav_me()
+        AppRecommendPage(common_driver).click_appDownNav_index()

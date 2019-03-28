@@ -4,6 +4,7 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/Android_GUI_test.iml" filepath="$PROJECT_DIR$/.idea/Android_GUI_test.iml" />
       <module fileurl="file://$PROJECT_DIR$/../appium_AutoTest/.idea/appium_AutoTest.iml" filepath="$PROJECT_DIR$/../appium_AutoTest/.idea/appium_AutoTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../test_pro/.idea/test_pro.iml" filepath="$PROJECT_DIR$/../test_pro/.idea/test_pro.iml" />
     </modules>
   </component>
 </project>

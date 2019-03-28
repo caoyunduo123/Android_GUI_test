@@ -5,6 +5,7 @@
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="module" module-name="appium_AutoTest" />
+    <orderEntry type="module" module-name="test_pro" />
   </component>
   <component name="TestRunnerService">
     <option name="projectConfiguration" value="pytest" />
